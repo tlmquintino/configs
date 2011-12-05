@@ -1,0 +1,19 @@
+[user]
+	name = Tiago Quintino
+	email = tlmquintino@gmail.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[alias]
+	spush = svn dcommit
+	spull = svn rebase
+	up = svn rebase
+	st = status
+	di = diff
+	ci = commit
+	co = checkout
+	aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+[core]
+	quotepath = false
+
