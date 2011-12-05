@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# directory aliases
+
+#alias ls="ls --color=auto"
+#alias la="ls -lahtrc --color=auto"
+#alias ll="ls -lhtrc --color=auto"
+
+alias ls='ls -G'
+alias ll='ls -Glhtrc'
+alias la='ls -Glahtrc' 
+
+alias cd..="cd .."
+
+alias du="du -h"
+alias df="df -h"
+alias du="du -k -h"
+
+alias hh='history'
+
+# network aliases
+alias sshxy="ssh -XY "
+alias wget="wget -U Mozilla"
+

@@ -1,0 +1,36 @@
+#!/bin/bash
+# ~/.bashrc: executed by bash(1) for non-login shells.
+
+# echo "sourcing $HOME/.bashrc"
+
+# source my definitions
+[[ -f  $HOME/.configs/bash/generic ]] && source $HOME/.configs/bash/generic
+
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
+# bash history setup
+export HISTCONTROL=ignoredups
+export HISTSIZE=5000
+export HISTFILESIZE=5000
+
+# limit core dump files to 0
+ulimit -c 0
+
+# set LS_COLORS
+export LS_COLORS="$LS_COLORS:*.png=35:*.jpg=35:*.gif=35:*.hh=01;35:*.h=01;35:*.hpp=01;35:*.ci=01;35:*.cpp=32:*.cxx=32:*.cc=32:*.c=32:*.pdf=00;93:*.ps=00;93:ex=01;32:di=01;33"
+# set LSCOLORS for macosx
+export LSCOLORS="gxfxcxdxbxegedabagacad"
+
+# set prompt
+
+# standard
+PS1="\[\033[1;32m\][\$(date +%H:%M)] \[\033[0m\]\u@\h:\[\033[1;31m\]\W>\[\033[0m\] "
+
+# git enhanced
+# export GIT_PS1_SHOWDIRTYSTATE=1
+# export GIT_PS1_SHOWUNTRACKEDFILES=1
+# export GIT_PS1_SHOWSTASHSTATE=1
+# PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+# PS1='\[\033[1;32m\][$(date +%H:%M)] \[\033[0m\]\u@\h:\[\033[1;31m\]\W$(__git_ps1 " (%s)")>\[\033[0m\] '
+

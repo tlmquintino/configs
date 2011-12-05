@@ -1,0 +1,9 @@
+# file sourced for login shells
+
+# echo 'sourcing $HOME/.bash_profile'
+
+# source my definitions
+if [ -f $HOME/.bashrc ]; then
+        source $HOME/.bashrc
+fi
+

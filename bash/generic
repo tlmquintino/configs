@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#echo "sourcing $HOME/.configs/bash/generic"
+
+[[ -f  /usr/bin/vim  ]] && export EDITOR="/usr/bin/vim"
+[[ -f  /usr/bin/most ]] && export PAGER="/usr/bin/most"
+
+# export my paths
+[[ -f  $HOME/.configs/bash/paths ]] && source $HOME/.configs/bash/paths
+# git completion
+[[ -f  $HOME/.configs/bash/git-completion.bash ]] && source $HOME/.configs/bash/git-completion.bash
+# common aliases
+[[ -f $HOME/.configs/bash/alias ]] && source $HOME/.configs/bash/alias
+
+# source specific machine profile
+[[ -f $HOME/.configs/extras/$HOSTNAME/profile ]] && source $HOME/.configs/extras/$HOSTNAME/profile
+
