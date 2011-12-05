@@ -6,9 +6,6 @@
 	status = auto
 	branch = auto
 [alias]
-	spush = svn dcommit
-	spull = svn rebase
-	up = svn rebase
 	st = status
 	di = diff
 	ci = commit

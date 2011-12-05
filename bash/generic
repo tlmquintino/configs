@@ -1,17 +1,19 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #echo "sourcing $HOME/.configs/bash/generic"
 
-[[ -f  /usr/bin/vim  ]] && export EDITOR="/usr/bin/vim"
-[[ -f  /usr/bin/most ]] && export PAGER="/usr/bin/most"
-
 # export my paths
 [[ -f  $HOME/.configs/bash/paths ]] && source $HOME/.configs/bash/paths
-# git completion
-[[ -f  $HOME/.configs/bash/git-completion.bash ]] && source $HOME/.configs/bash/git-completion.bash
 # common aliases
 [[ -f $HOME/.configs/bash/alias ]] && source $HOME/.configs/bash/alias
 
+# git completion
+[[ -f  $HOME/.configs/bash/git-completion.bash ]] && source $HOME/.configs/bash/git-completion.bash
+
 # source specific machine profile
-[[ -f $HOME/.configs/extras/$HOSTNAME/profile ]] && source $HOME/.configs/extras/$HOSTNAME/profile
+export KARCH="$(uname -s).$(uname -m)"
+[[ -f $HOME/.configs-extra/$KARCH/bash/profile ]] && source $HOME/.configs-extra/$KARCH/bash/profile
+
+# source specific hostname profile
+[[ -f $HOME/.configs-extra/$HOSTNAME/bash/profile ]] && source $HOME/.configs-extra/$HOSTNAME//bash/profile
 

@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # file sourced for login shells
 
 # echo 'sourcing $HOME/.bash_profile'

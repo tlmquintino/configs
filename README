@@ -2,11 +2,11 @@ cd $HOME
 
 # bash setup
 ln -sf .configs/bash/bash_profile .bash_profile
-ln -sf .configs/git/bashrc .bashrc
+ln -sf .configs/bash/bashrc .bashrc
 
 # git setup
-ln -sf .configs/git/.gitconfig
-ln -sf .configs/git/.gitignore
+ln -sf .configs/git/gitconfig .gitconfig
+ln -sf .configs/git/gitignore .gitignore
 
 # vim setup
 ln -sf .configs/vim .vim

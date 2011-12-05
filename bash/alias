@@ -1,14 +1,23 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # directory aliases
 
-#alias ls="ls --color=auto"
-#alias la="ls -lahtrc --color=auto"
-#alias ll="ls -lhtrc --color=auto"
+if [[ "$OSTYPE" =~ ^darwin ]]; then
+  alias ls='ls -G'
+  alias ll='ls -Glhtrc'
+  alias la='ls -Glahtrc'
+fi
 
-alias ls='ls -G'
-alias ll='ls -Glhtrc'
-alias la='ls -Glahtrc' 
+if [[ "$OSTYPE" =~ linux ]]; then
+  alias ls="ls --color=auto"
+  alias la="ls -lahtrc --color=auto"
+  alias ll="ls -lhtrc --color=auto"
+fi
+
+if [[ "$OSTYPE" =~ aix ]]; then
+  alias la='ls -ltra'
+  alias ll='ls -ltr'
+fi
 
 alias cd..="cd .."
 
@@ -21,4 +30,17 @@ alias hh='history'
 # network aliases
 alias sshxy="ssh -XY "
 alias wget="wget -U Mozilla"
+
+# Canonical hex dump; some systems have this symlinked
+type -t hd > /dev/null || alias hd="hexdump -C"
+
+# OS X has no `md5sum`, so use `md5` as a fallback
+type -t md5sum > /dev/null || alias md5sum="md5"
+
+# set editor
+which vim  &> /dev/null && export EDITOR="$(which vim)"
+
+# set pager, prefer most to less
+which less &> /dev/null && export PAGER="$(which less)"
+which most &> /dev/null && export PAGER="$(which most)"
 
