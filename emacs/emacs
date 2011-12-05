@@ -1,0 +1,51 @@
+(setq make-backup-files         nil) ; Don't want any backup files 
+(setq auto-save-list-file-name  nil) ; Don't want any .saves files
+(setq auto-save-default         nil) ; Don't want any auto saving
+ 
+(setq search-highlight           t) ; Highlight search object
+(setq query-replace-highlight    t) ; Highlight query object
+(setq mouse-sel-retain-highlight t) ; Keep mouse high-lightening 
+
+;; turn on syntax highlight for all modes
+(global-font-lock-mode 1) 
+
+;; improve decoration of fonts
+(setq font-lock-maximum-decoration t) 
+
+;; set font size to 11pt
+(set-face-attribute 'default nil :height 110) 
+
+;; insert text to substitute the selected text
+(delete-selection-mode t) 
+
+;; visible bell, not buzzer 
+(setq visible-bell t) 
+
+;; make searches case sensitive
+(setq case-fold-search nil) 
+
+
+;; Goto-line short-cut key
+(global-set-key "\C-l" 'goto-line) 
+
+;; Display the current time
+(display-time)
+
+;; Show line and column number
+(line-number-mode 1)
+(column-number-mode 1)
+
+;; enable visual feedback on selections
+(setq-default transient-mark-mode t)
+
+;; stop at the end of the file, not just add lines
+(setq next-line-add-newlines nil)
+
+;; No tabs-- use spaces when indenting (doesn't affect Makefiles, 
+;; does affect text files and code, doesn't affect existing tabs).
+;; The use of setq-default means this only affects modes that don't
+;; overwrite this setting.
+(setq-default indent-tabs-mode nil)
+
+;; set tab width
+(setq default-tab-width 4)

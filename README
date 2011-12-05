@@ -12,3 +12,6 @@ ln -sf .configs/git/.gitignore
 ln -sf .configs/vim .vim
 ln -sf .configs/vim/vimrc .vimrc
 ln -sf .configs/vim/gvimrc .gvimrc
+
+# emacs setup
+ln -sf .configs/emacs/emacs .emacs
