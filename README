@@ -1,19 +1,7 @@
-#! /usr/bin/env bash
+Generic configuration files for:
+  * bash
+  * git
+  * vi
+  * emacs
 
-cd $HOME
-
-# bash setup
-ln -sf .configs/bash/bash_profile .bash_profile
-ln -sf .configs/bash/bashrc .bashrc
-
-# git setup
-ln -sf .configs/git/gitconfig .gitconfig
-ln -sf .configs/git/gitignore .gitignore
-
-# vim setup
-ln -sf .configs/vim .vim
-ln -sf .configs/vim/vimrc .vimrc
-ln -sf .configs/vim/gvimrc .gvimrc
-
-# emacs setup
-ln -sf .configs/emacs/emacs .emacs
+To to use across my UNIX machines.

@@ -5,7 +5,7 @@
 # echo "sourcing $HOME/.bashrc"
 
 # source my definitions
-[[ -f  $HOME/.configs/bash/generic ]] && source $HOME/.configs/bash/generic
+[[ -f  $HOME/.myconfigs/bash/generic ]] && source $HOME/.myconfigs/bash/generic
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
