@@ -1,16 +1,28 @@
 [user]
 	name = Tiago Quintino
 	email = tlmquintino@gmail.com
+
+[merge]
+#    tool = opendiff
+	  summary = true
+
 [color]
 	diff = auto
 	status = auto
 	branch = auto
+	interactive = auto
+	ui = true
+
 [alias]
 	st = status
 	di = diff
 	ci = commit
 	co = checkout
+	rv = checkout -- 
 	aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+	last = log -1 HEAD
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	count = "!bash -c 'git log | grep "^commit" | wc -l' -"
+
 [core]
 	quotepath = false
-
