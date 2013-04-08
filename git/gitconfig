@@ -1,16 +1,39 @@
 [user]
 	name = Tiago Quintino
-	email = tlmquintino@gmail.com
+	email = tiago.quintino@ecmwf.int
 [color]
 	diff = auto
 	status = auto
 	branch = auto
+	ui = auto
 [alias]
+    ls = ls-files
 	st = status
 	di = diff
 	ci = commit
 	co = checkout
+	br = branch
+	df = diff
+	unstage = reset HEAD
+	staged = diff --staged
+    ignored = ls-files -o -i --exclude-standard
+	logc = log -p --pretty=oneline --abbrev-commit
+	hist = log --graph --pretty=format:'%C(red)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+	ali = config --get-regexp 'alias.*'
+
 [core]
 	quotepath = false
+	excludesfile = /home/ma/matq/.gitignore
 
+[push]
+	default = simple
+
+[git-p4]
+    skipsubmitedit = true
+    skipsubmiteditcheck = true
+
+[merge]
+	tool = meld
+[diff]
+	# external = git-meld
