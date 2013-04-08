@@ -1,6 +1,6 @@
 [user]
 	name = Tiago Quintino
-	email = tlmquintino@gmail.com
+	email = tiago.quintino@ecmwf.int
 
 [merge]
 #    tool = opendiff
@@ -10,19 +10,42 @@
 	diff = auto
 	status = auto
 	branch = auto
+	ui = auto
 	interactive = auto
-	ui = true
 
 [alias]
+    ls = ls-files
 	st = status
 	di = diff
 	ci = commit
 	co = checkout
+	br = branch
 	rv = checkout -- 
-	aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+	unstage = reset HEAD
+	staged = diff --staged
+    ignored = ls-files -o -i --exclude-standard
 	last = log -1 HEAD
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	logc = log -p --pretty=oneline --abbrev-commit
+	hist = log --graph --pretty=format:'%C(red)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	count = "!bash -c 'git log | grep "^commit" | wc -l' -"
+	aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+	ali = config --get-regexp 'alias.*'
+
+[core]
+	quotepath = false
+	excludesfile = /home/ma/matq/.gitignore
+
+[push]
+	default = simple
+
+[git-p4]
+    skipsubmitedit = true
+    skipsubmiteditcheck = true
+
+[merge]
+	tool = meld
+[diff]
+	# external = git-meld
 
 [core]
 	quotepath = false
