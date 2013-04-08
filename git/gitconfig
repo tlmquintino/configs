@@ -1,11 +1,18 @@
 [user]
 	name = Tiago Quintino
 	email = tiago.quintino@ecmwf.int
+
+[merge]
+#    tool = opendiff
+	  summary = true
+
 [color]
 	diff = auto
 	status = auto
 	branch = auto
 	ui = auto
+	interactive = auto
+
 [alias]
     ls = ls-files
 	st = status
@@ -13,12 +20,14 @@
 	ci = commit
 	co = checkout
 	br = branch
-	df = diff
+	rv = checkout -- 
 	unstage = reset HEAD
 	staged = diff --staged
     ignored = ls-files -o -i --exclude-standard
+	last = log -1 HEAD
 	logc = log -p --pretty=oneline --abbrev-commit
 	hist = log --graph --pretty=format:'%C(red)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	count = "!bash -c 'git log | grep "^commit" | wc -l' -"
 	aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
 	ali = config --get-regexp 'alias.*'
 
@@ -37,3 +46,6 @@
 	tool = meld
 [diff]
 	# external = git-meld
+
+[core]
+	quotepath = false
