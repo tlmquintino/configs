@@ -33,7 +33,7 @@
 
 [core]
 	quotepath = false
-	excludesfile = /home/ma/matq/.gitignore
+	excludesfile = ~/.gitignore
 
 [push]
 	default = simple
