@@ -49,3 +49,5 @@
 
 [core]
 	quotepath = false
+[diff]
+	guitool = git-meld
