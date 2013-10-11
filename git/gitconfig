@@ -49,5 +49,9 @@
 
 [core]
 	quotepath = false
+	pager = less -x4
 [diff]
 	guitool = git-meld
+
+[mproj]
+	levels = 2  
