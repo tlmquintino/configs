@@ -24,8 +24,6 @@ export LS_COLORS="$LS_COLORS:*.png=35:*.jpg=35:*.gif=35:*.hh=01;35:*.h=01;35:*.h
 export LSCOLORS="gxfxcxdxbxegedabagacad"
 
 # set prompt
-
-# standard
 PS1="\[\033[1;32m\][\$(date +%H:%M)] \[\033[0m\]\u@\h:\[\033[1;31m\]\W>\[\033[0m\] "
 
 # git enhanced
