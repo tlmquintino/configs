@@ -2,7 +2,7 @@
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 
-# echo "sourcing $HOME/.bashrc"
+# echo "sourcing $BASH_SOURCE"
 
 # source my definitions
 [[ -f  $HOME/.myconfigs/bash/generic ]] && source $HOME/.myconfigs/bash/generic
