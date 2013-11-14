@@ -1,0 +1,5 @@
+#!/bin/bash 
+
+# echo "sourcing $BASH_SOURCE"
+
+export PATH=/usr/local/bin:$PATH
