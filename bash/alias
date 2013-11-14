@@ -19,6 +19,8 @@ if [[ "$OSTYPE" =~ aix ]]; then
   alias ll='ls -ltr'
 fi
 
+alias ldir="ls -d */"
+
 alias cd..="cd .."
 
 alias du="du -h"

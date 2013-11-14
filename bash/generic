@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#echo "sourcing $HOME/.myconfigs/bash/generic"
+# echo "sourcing $BASH_SOURCE"
 
 # export my paths
 [[ -f  $HOME/.myconfigs/bash/paths ]] && source $HOME/.myconfigs/bash/paths

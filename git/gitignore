@@ -40,3 +40,7 @@ Thumbs.db
 
 # cmake generated
 CMakeLists.txt.*
+
+# backup
+*~
+*.bak
